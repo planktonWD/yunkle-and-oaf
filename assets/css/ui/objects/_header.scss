@@ -1,111 +1,16 @@
-$header-background: $highlight--mute;
-$header-color: white;
+$header-background: white;
+$header-color: $base-color;
 
-$header-padding-top: 40px;
-
-
-.header--absolute {
-
-	@include bp(full-nav) {
-		position: absolute;
-		top:0;
-		left: 0;
-		width: 100%;
-		z-index: 99;
-		padding-bottom: 40px;
-	}
-}
 
 header {
 	background: $header-background;
 	float: left;
 	width: 100%;
-	padding-top: $header-padding-top;
+	padding: $spacing-unit 0;
 	color: $header-color;
-}
-
-/*
-
-	Boilerplate stylguide only just delete
-
-*/
-
-header {
-	.huge {
-
-		padding-top: 3em;
-		min-height: 7.5em;
-
-		@include bp(desk) {
-	        padding-top: 1.5em;
-			min-height: 5.5em;
-	    }
-	}
-
-		&.auto-height .huge {
-			min-height: 0 !important;
-		}
-
-	hr {
-		border: solid 1px white;
-	}
-
-	h4 {
-		float: left;
-		width: 100%;
-		color: white;
-		text-align: center;
-
-		a {
-			color: white;
-
-			@include attention() {
-				color: $highlight;
-			}
-		}
-
-		&.active {
-			a {border-bottom: solid 2px white; padding-bottom: 0.2em;color: $highlight;}
-		}
-
-		@include bp(landscape-mobile) {
-	        width: 50%;
-			text-align: left;
-	    }
-
-		@include bp(full-nav) {
-	        width: 33%;
-	    }
-
-		@include bp(portable) {
-	        width: auto;
-			margin-right: 4%;
-			@include font-size(12px);
-
-			&:last-of-type {
-				margin-right: 0;
-			}
-	    }
-
-		@include bp(small-desk) {
-	        @include font-size(14px);
-			margin-right: 3.2%;
-
-	    }
-
-		@include bp(desk) {
-	        margin-right: 6%;
-			@include font-size(15px);
-
-	    }
-
-	}
-
-	&.bg-image .huge {
-
-		@include bp(desk) {
-	        padding-top: 2em;
-
-	    }
+	
+	@include bp(full-nav) {
+		padding-bottom: 100px;
 	}
 }
+

@@ -22,7 +22,7 @@
 
   /* non-critical appearance styles */
   list-style: none;
-  background: $highlight--mute;
+  background: white;
 
 
   /* Navigation Menu - List items */
@@ -48,7 +48,7 @@
       /* non-critical appearance styles */
       display: block;
       padding: $spacing-unit/4 $spacing-unit;
-      color: white;
+      color: $base-color;
       text-decoration: none;
       transition: all 0.3s;
 

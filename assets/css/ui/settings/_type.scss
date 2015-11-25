@@ -9,9 +9,9 @@ $base-line-height:        22px !default;
 //
 //
 
-$heading-size-1:  44px;
-$heading-size-2:  37px;
-$heading-size-3:  24px;
+$heading-size-1:  30px;
+$heading-size-2:  26px;
+$heading-size-3:  20px;
 $heading-size-4:  15px;
 $heading-size-5:  16px;
 $heading-size-6:  14px;
@@ -26,6 +26,10 @@ $book: 300;
 $heavy: 700;
 $black: 800;
 
+$regular: $book;
+$bold: $heavy;
+
 // Font Family
 
-$base-font: 'Avenir W01', Helvetica, Arial, sans-serif;
+$base-font: "ff-basic-gothic-web-pro", Helvetica, Arial, sans-serif;
+

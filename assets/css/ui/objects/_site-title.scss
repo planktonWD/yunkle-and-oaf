@@ -4,24 +4,14 @@
 
 ////////////////////
 
-@mixin site-title-svg-dims {
-	width: 214px;
-	height: 47px;
-}
-
-@mixin site-title-svg-dims--full-nav{
-	width: 174px;
-	height: 40px;
-}
 
 .site-title-svg {
 	position: relative;
 	font-size: 0;
 	float: left;
-	//margin: 0 auto; // toggle centered easy!!
 	line-height: 1;
 	@include vendor(transition, 0.3s);
-	@include site-title-svg-dims;
+	width: 219px;
 
 
 	&:hover {
@@ -30,20 +20,20 @@
 	}
 
 	svg, a {
-		@include site-title-svg-dims;
-
 		display: block;
-		fill: white;
+		
 	}
 
 	@include bp(full-nav) {
-		@include site-title-svg-dims--full-nav;
-
-		svg, a {
-			@include site-title-svg-dims--full-nav;
-
-		}
-
+		width: 400px;
+		margin: 0 auto;
+		float: none;
+		
+	}
+	
+	@include bp(portable) {
+		width: 560px;
+		
 	}
 
 }

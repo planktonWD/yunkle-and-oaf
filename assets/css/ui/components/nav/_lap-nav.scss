@@ -2,25 +2,23 @@
 
    .nav {
         /* set these to override the mobile nav */
-        right: $spacing-unit !important;
+        right: auto !important;
         //margin-right:-550px;
         left: auto;
         bottom: auto;
         margin-bottom: 0 !important;
-        top: 61px;
+        top: 200px;
         position: absolute;
-        width: 700px;
+        width: 100%;
         @include vendor(transform, none !important);
         @include vendor(translate, none !important);
         padding: 0;
         background: none;
-        text-align: right;
+        text-align: center;
         overflow: visible;
         height: auto;
         @include font-size(14px);
         z-index: 99;
-        padding-right: 136px;
-
 
         ul {
             margin: 0;
@@ -31,35 +29,24 @@
             display: inline-block;
             position: relative;
             width: auto;
-            margin-right: $spacing-unit/2;
+            margin-right: $spacing-unit/4;
+            margin-left: $spacing-unit/4;
             @include vendor(transition, 0.3s);
-
-
-            &.active {
-                a {font-weight: $black; border-bottom: solid 2px white; padding-bottom: 0.2em;}
-            }
+			
 
             a {
-                border: none;
-                padding: 0;
-
+                
                 @include attention {
                     color: $highlight;
-                    border-bottom: solid 2px white; padding-bottom: 0.2em;
+                   
                 }
+                
+                padding-left: $spacing-unit/2;
+                padding-right: $spacing-unit/2;
             }
 
 
         }
-
-        .button--white {
-            position: absolute;
-            top: -8px;
-            right: -$spacing-unit;
-            @include font-size(14px, 1.5);
-            padding-bottom: 0.3em !important;
-        }
-
 
     }
 
@@ -67,21 +54,6 @@
 }
 
 @include bp(portable) {
-
-   .nav li {
-       margin-right: $spacing-unit;
-   }
-}
-
-@include bp(desk) {
-
-    .nav {
-        width: 900px;
-        right: 50% !important;
-        margin-right: -540px;
-    }
-    .nav li {
-        margin-right: 59px;
-    }
-
-}
+		.nav {top: 260px;}
+		
+	}

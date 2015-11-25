@@ -1,8 +1,5 @@
-$dark-purple: #1E0C25;
-$dark-purple-rgba: rgba(30, 12, 37, 1);
-$dark-purple-rgba-trans: rgba(30, 12, 37, 0);
-
-$purple: #9865AB;
+$blue: #87d9d1;
+$light-blue: #bee9ef;
 
 $light-grey: #7A7A7A;
 
@@ -12,15 +9,15 @@ $off-white: #f7f8f8;
 
 // BASE VARIABLES
 
-$base-text-color:         black;
+$base-text-color:   black;
 $base-background-color:	white;
 
 
 // USEFUL VARIABLES
 
-$highlight: $purple;
+$highlight: $blue;
 
-$highlight--mute: $dark-purple;
+$highlight--mute: $light-blue;
 
 $base-color: $base-text-color;
 
@@ -51,5 +48,5 @@ $placeholder: #aaa;
 
 // GRADIENTS
 
-$ellipse-gradiant-outer: $dark-purple-rgba-trans;
-$ellipse-gradiant-inner: $dark-purple-rgba;
+$ellipse-gradiant-outer: $blue;
+$ellipse-gradiant-inner: $light-blue;

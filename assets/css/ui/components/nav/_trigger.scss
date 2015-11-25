@@ -8,7 +8,7 @@
 
 $trigger-width: 40px;
 $trigger-height: 19px;
-$trigger-top-position: 61px;
+$trigger-top-position: 50px;
 $slice3-top: -20px;
 $slice3-left: 2px;
 $span-mb: 8px;
@@ -26,7 +26,7 @@ $span-ml: 2px;
 */
 ////////////////////////
 
-$span-color: white;
+$span-color: $base-color;
 
 $push-site-wrap-width: -220px; // change direction using - or + value
 $push-trigger-width: $push-site-wrap-width; // change direction using - or + value
