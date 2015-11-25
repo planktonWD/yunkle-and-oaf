@@ -1,0 +1,123 @@
+<!--
+
+
+      Forms
+
+
+    -->
+
+    <div class="layout u-bb u-mb u-pb" id="forms">
+
+      <div class="layout__item">
+
+        <h1>Forms</h1>
+        <p>Input, textarea, buttons, stacked and inline...</p>
+        <p>The date picker, time picker and select boxes have there own CSS and JS. You can see in style.scss how they are included and also in the JS folder</p>
+
+        <h2>Select Elements</h2>
+        <p>The jQuery plugin works it's magic on select elements with a class of either .single-select or .multi-select. Inspect one here to see and also note the use of .formfield--svg on the container so position the down arrow and the svg tag is required also.</p>
+
+        <h2>Time and Date Fields</h2>
+        <p>The jQuery plugin works it's magic on select elements with a class of either .timepicker or .datepicker as above make sure you add .formfield--svg to the container and pop the calendar svg in there too</p>
+
+        <h2>Tags</h2>
+        <p>Here is the markup div data-tags-input-name="tag" id="tagBox" /div</p>
+
+      </div>
+
+        <form id="myForm" action="#" method="post" class="bg-image--grey u-p layout">
+
+        <div class="layout__item">
+          <div>
+            <label for="name">Text Input:</label>
+            <input type="text" name="name" id="name" value="" tabindex="1" placeholder="Text Input">
+           </div>
+            <div>
+            <label for="name">Text Input:</label>
+            <input type="text" name="name" id="name" value="" tabindex="1" placeholder="Text Input">
+           </div>
+            <div>
+            <label for="name">Text Input:</label>
+            <input type="text" name="name" id="name" value="" tabindex="1" placeholder="Text Input">
+           </div>
+
+
+          </div>
+           <div class="layout__item one-half">
+            <label for="name">Text Input:</label>
+            <input type="text" name="name" id="name" value="" tabindex="1" placeholder="Text Input">
+           </div><!--
+            --><div class="layout__item one-half formfield--svg">
+            <label for="name">Pick a Time:</label>
+            <input type="text" name="name" id="name" value="" tabindex="1" placeholder="Pick a Time:" class="timepicker">
+
+            <svg>
+                  <use xlink:href="img/svg-defs.svg#shape-calendar-small" />
+              </svg>
+           </div>
+
+           <div class="layout__item one-third formfield--svg">
+            <label for="name">This is a date picker</label>
+            <input type="text" name="name" id="name" value="" tabindex="1" placeholder="Pick a date sir" class="datepicker">
+            <svg>
+                  <use xlink:href="img/svg-defs.svg#shape-calendar-small" />
+              </svg>
+           </div><!--
+            --><div class="layout__item one-quarter">
+            <label for="name">Text Input:</label>
+            <input type="text" name="name" id="name" value="" tabindex="1" placeholder="Text Input">
+           </div><!--
+            --><div class="layout__item one-quarter formfield--svg">
+            <label for="select-choice">Select Dropdown Choice:</label>
+            <select name="select-choice" id="select-choice" class="single-select">
+            <option disabled selected> -- select an option -- </option>
+              <option value="Choice 1">Choice 1</option>
+              <option value="Choice 2">Choice 2</option>
+              <option value="Choice 3">Choice 3</option>
+            </select>
+            <svg>
+                  <use xlink:href="img/svg-defs.svg#shape-down-small" />
+              </svg>
+           </div><!--
+            --><div class="layout__item">
+            <label for="textarea">Textarea:</label>
+            <textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+          </div><!--
+
+          --><div class="layout__item">
+              <label>Tag Zone</label>
+              <div data-tags-input-name="tag" id="tagBox"></div>
+            </div>
+          <div class="layout__item one-quarter formfield--svg">
+            <label for="name">This is a date picker</label>
+            <input type="text" name="name" id="name" value="" tabindex="1" placeholder="Pick a date sir" class="datepicker">
+            <svg>
+                  <use xlink:href="img/svg-defs.svg#shape-down-small" />
+              </svg>
+           </div><!--
+            --><div class="layout__item one-quarter">
+            <label for="name">Text Input:</label>
+            <input type="text" name="name" id="name" value="" tabindex="1" placeholder="Text Input">
+           </div><!--
+            --><div class="layout__item one-quarter formfield--svg">
+            <label for="select-choice">Select Dropdown Choice:</label>
+            <select name="select-choice" id="select-choice" class="single-select">
+            <option disabled selected> -- select an option -- </option>
+              <option value="Choice 1">Choice 1</option>
+              <option value="Choice 2">Choice 2</option>
+              <option value="Choice 3">Choice 3</option>
+            </select>
+            <svg>
+                  <use xlink:href="img/svg-defs.svg#shape-down-small" />
+              </svg>
+           </div><div class="layout__item one-quarter u-vb">
+            <input value="Submit" class="button  u-tt">
+           </div><!--
+            -->
+          
+
+        </form>
+
+      
+
+    </div>

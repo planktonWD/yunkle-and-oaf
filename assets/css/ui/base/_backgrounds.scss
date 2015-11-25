@@ -1,0 +1,65 @@
+
+/*
+	sections with a background image
+*/
+
+.gradient {
+	@include vendor(background-size, cover);
+	background-position: top center;
+
+	@include bp(desk) {
+		background-attachment: fixed;
+	}
+}
+
+.gradient:after {
+	position:absolute;
+	top: 0;
+	left: 0;
+	height: 500px;
+	width: 100%;
+	content: "";
+	background: -moz-linear-gradient(top, $ellipse-gradiant-inner 0%, $ellipse-gradiant-outer 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, $ellipse-gradiant-inner), color-stop(100%, $ellipse-gradiant-outer));
+	background: -webkit-linear-gradient(top, $ellipse-gradiant-inner 0%, $ellipse-gradiant-outer 100%);
+	background: -o-linear-gradient(top, $ellipse-gradiant-inner 0%, $ellipse-gradiant-outer 100%);
+	background: -ms-linear-gradient(top, $ellipse-gradiant-inner 0%, $ellipse-gradiant-outer 100%);
+	background: linear-gradient(to bottom, $ellipse-gradiant-inner 0%, $ellipse-gradiant-outer 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$ellipse-gradiant-inner', endColorstr='$ellipse-gradiant-outer', GradientType=0 );
+}
+
+.gradient {
+	.wrapper {
+		z-index: 99;
+	}
+}
+
+
+
+
+/*
+	sections with a background color
+*/
+
+.bg-off-white {
+	background: $off-white;
+}
+
+/*
+.bg-image--tablet {
+	background-image: url(../../img/tablet.jpg); // fallback for browser with no mulit-background support
+	background-image: linear-gradient(
+      rgba(0,0,0, 0.6),
+      rgba(0,0,0, 0.6)
+    	),
+	  url(../../img/tablet.jpg);
+	@include vendor(background-size, cover);
+	background-position: top center;
+	@include bp(desk) {
+		background-attachment: fixed;
+	}
+	p, li, h1, h2, h3, h4 {
+		color: white;
+	}
+}
+*/

@@ -1,0 +1,185 @@
+/////////////
+//
+// set the style for the actual .pricing-table, some of these will be used for the .pricing-table--mobile as it has this class also
+//
+//
+//	<ul class="one-whole wrapper pricing-table">
+//
+//	<li class="pricing-table__feature zebra layout">
+//		
+//		<ul class="block-list">
+//
+//			<li class="layout__item pricing-table__feature__feature-title"><span>The Feature Venenatis Condimentum</span></li><!--
+//
+//			--><li class="layout__item pricing-table__feature__results-list">
+//
+//				<ul class="block-list">
+//				
+//					<li class="one-quarter">b</li><!--
+//					--><li class="one-quarter">c</li><!--
+//					--><li class="one-quarter">d</li><!--
+//					--><li class="one-quarter">e</li>
+//			
+//				</ul>
+//
+//			</li>
+//
+//		</ul>
+//	
+//	</li>
+//
+//  .....
+//
+//	</ul>
+//
+/////////////
+
+.pricing-table {
+
+	display: none;
+	overflow: hidden;
+	
+
+	// at this breakpoint hide the .pricing-table--mobile
+	@include bp(lap-and-up) {
+
+		display: block;
+
+		&:after {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 7000px;
+			width: $spacing-unit;
+			background: white;
+			content: "";
+		}
+
+	}
+
+}
+
+#other-costs {
+	display: block;
+}
+
+	.pricing-table__feature {
+
+		// each feature (e.g the row) is overflow hidden
+		overflow: hidden;
+		//margin-bottom: -0.38em;
+
+		li, span {
+			@extend .small;
+			padding-top: 4px;
+		
+		}
+		
+		ul li {		
+			position: relative;
+		}
+
+		&:first-of-type {
+			position: relative;
+
+			&:after {
+				position: absolute;
+				top: 0;
+				left: $spacing-unit;
+				height: 1px;
+				width: 325.5%;
+				background: #ccc;
+				content: "";
+			}
+
+		}
+	}
+
+		.pricing-table__feature__feature-title {
+			width: 30%;
+			position: relative;
+
+			span {
+			padding: $spacing-unit/2 $spacing-unit /2;
+			display: block;
+
+				// border at top of feature
+				&:after {
+					position: absolute;
+					bottom: 0;
+					left: $spacing-unit;
+					height: 1px;
+					width: 325.5%;
+					background: #ccc;
+					content: "";
+				}
+
+				// border to left of feature
+				&:before {
+					position: absolute;
+					top: 0;
+					left: $spacing-unit;
+					height: 300%;
+					width: 1px;
+					background: #ccc;
+					content: "";
+
+				}
+			}
+
+			&:after {
+				display: none;
+			}
+		}
+
+		.pricing-table__feature__results-list {
+
+			width: 70%;
+
+			&:before {
+
+				// border to left of this secion
+				position: absolute;
+				top: -50px;
+				left: $spacing-unit;
+				height: 500%;
+				width: 1px;
+				background: #ccc;
+				content: "";
+			
+			}
+
+			li {
+
+				padding-top: 11px;
+			
+				// border to left of cell
+				&:after {
+					position: absolute;
+					top: -50px;
+					left: 0;
+					height: 500%;
+					width: 1px;
+					background: #ccc;
+					content: "";
+				}
+
+				text-align: center;
+
+				&:after {
+				// border to right of feature
+				
+					position: absolute;
+					top: -50px;
+					right: 0;
+					height: 500%;
+					width: 1px;
+					background: #ccc;
+					content: "";
+					left: auto;
+				
+				}
+			}
+		}
+
+

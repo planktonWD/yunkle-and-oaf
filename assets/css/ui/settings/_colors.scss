@@ -1,0 +1,55 @@
+$dark-purple: #1E0C25;
+$dark-purple-rgba: rgba(30, 12, 37, 1);
+$dark-purple-rgba-trans: rgba(30, 12, 37, 0);
+
+$purple: #9865AB;
+
+$light-grey: #7A7A7A;
+
+$off-white: #f7f8f8;
+
+
+
+// BASE VARIABLES
+
+$base-text-color:         black;
+$base-background-color:	white;
+
+
+// USEFUL VARIABLES
+
+$highlight: $purple;
+
+$highlight--mute: $dark-purple;
+
+$base-color: $base-text-color;
+
+$base-color--mute: $light-grey;
+
+// LINKS
+
+$color-links--attention: $highlight--mute;
+
+$content-color-links: $highlight;
+
+$color-links-secret--attention: $highlight;
+
+// HEADINGS
+
+$heading-color: $highlight;
+
+
+// BORDERS & LINES
+
+$hr: $light-grey;
+
+
+
+// FORM ELEMENTS
+
+$placeholder: #aaa;
+
+// GRADIENTS
+
+$ellipse-gradiant-outer: $dark-purple-rgba-trans;
+$ellipse-gradiant-inner: $dark-purple-rgba;

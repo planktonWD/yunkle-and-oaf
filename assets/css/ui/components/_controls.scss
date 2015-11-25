@@ -1,0 +1,32 @@
+.controls {
+	text-align: left;
+
+	a {
+		margin: 0;
+		padding-left: 15px;
+		display: block;
+		text-align: left;
+		float: left;
+		margin-right: $spacing-unit/2;
+		margin-bottom: $spacing-unit/2 !important;
+
+		&.aligncenter {
+			text-align: center;
+		}
+
+		@include bp(desk) {
+			margin: 0 auto;
+			float: none;
+			min-width: 220px;
+			max-width: 50%;
+		}
+
+		svg {
+			position: relative;
+			left: 0;
+			display: inline-block;
+			top: 2px;
+			margin-right: 6px;
+		}
+	}
+}

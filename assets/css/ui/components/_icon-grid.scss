@@ -1,0 +1,93 @@
+.icon-grid__item {
+	float: left;
+	width: 120px;
+	height: 120px;
+	background: white;
+	margin: 0 $spacing-unit/2 $spacing-unit/2 0;
+	text-align: center;
+	color: $highlight !important;
+	@include vendor(transition, 0.3s);
+	@include font-size(13px);
+
+	@include bp(two-hands) {
+
+
+		float: none;
+		display: inline-block;
+		margin: 0 0 $spacing-unit/2 $spacing-unit/2;
+
+	}
+
+	svg {
+		fill: $base-text-color;
+		width: 50px;
+		height: 50px;
+		margin: $spacing-unit auto $spacing-unit/4;
+
+		@include bp(two-hands) {
+
+			width: 50px;
+			height: 50px;
+
+		}
+	}
+
+	p {
+		color: $highlight;
+	}
+
+	&:hover {
+		background: $highlight;
+		cursor: pointer;
+
+		p {
+			color: white;
+		}
+
+		svg {
+			fill: white;
+		}
+	}
+}
+
+	.icon-grid__item--active {
+
+		background: $highlight;
+		color: white;
+
+		svg {
+			fill: white;
+		}
+
+		p {
+			color: white;
+		}
+
+		&:hover {
+			background: white;
+
+
+			p {
+				color: $highlight;
+			}
+
+			svg {
+				fill: $base-color;
+			}
+		}
+	}
+
+
+.icon-grid--left {
+
+	.icon-grid__item {
+
+		@include bp(two-hands) {
+
+			margin: 0 $spacing-unit/2 $spacing-unit/2 0;
+
+		}
+
+	}
+
+}

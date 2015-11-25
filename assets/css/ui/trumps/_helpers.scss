@@ -1,0 +1,62 @@
+.clearfix,
+%clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+}
+
+.alignnone {
+    margin-top: 0;
+    @extend %margin-bottom;
+    margin-right: 0;
+    margin-left: 0;
+}
+.aligncenter {
+    display:block;
+    margin-top: 0;
+    @extend %margin-bottom;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    text-align: center;
+}
+.alignright {
+    float:right;
+    margin-top: 0;
+    @extend %margin-bottom;
+    margin-right: 0;
+    margin-left: $spacing-unit;
+}
+.alignleft {
+    float:left;
+    margin-top: 0;
+    @extend %margin-bottom;
+    margin-right: $spacing-unit;
+    margin-left: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.fw {
+    width: 100%;
+    float: left;
+}
+
+ /*
+        margin-right: $spacing-unit;
+        display: inline-block;
+        width: auto;
+    }
+}
+
+*/
+@include bp(max-mobile) {
+    .mobile-text-center {
+        text-align: center;
+    }
+}

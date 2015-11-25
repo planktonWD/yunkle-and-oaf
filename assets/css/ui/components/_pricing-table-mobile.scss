@@ -1,0 +1,41 @@
+/////////////
+//
+// set the style for the .pricing-table--mobile. This is a clone of the .pricing-table and injected via jQuery into the tabs section
+//
+/////////////
+
+.pricing-table--mobile {
+
+	// remove padding that is present as part of the .wrapper class and other layout bits
+	padding: 0;
+	.layout, .layout__item {padding: 0; margin: 0; margin-bottom: -0.38em;}
+
+	// remove border to the left and bottom of table
+	span:before, span:after { display: none;}
+
+	// overides the list item color as this might change depending on the massive container it is now in
+	li {
+		color: initial;
+	}
+
+	.pricing-table__feature {
+		width: 100%;
+		border-bottom: $zebra-borders;
+	}
+
+	// set the size of the .one-quarter to 100%. Hides each of the avaible/unavailable 
+	// feature columns and only shows the one that corresponds to the tabs the user clicks.
+	.one-quarter {
+		width: 100% !important;
+		margin: 0;
+	}
+
+	// at this breakpoint hide the .pricing-table--mobile
+	@include bp(lap-and-up) {
+
+		display: none !important;
+
+	}
+}
+
+

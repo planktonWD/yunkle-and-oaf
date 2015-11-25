@@ -1,0 +1,28 @@
+.border-me {
+    position: relative;
+
+    &:after {
+        border-bottom: solid 1px $light-grey;
+        width: 75px;
+        height: 1px;
+        position: absolute;
+        content: "";
+        bottom: 0;
+        right: 50%;
+        margin-right: -30px;
+
+    }
+
+    @include bp(portable) {
+        &:after {
+            border-bottom: none;
+            border-right: solid 1px $light-grey;
+            width: 1px;
+            height: 80%;
+            top: 0;
+            right: -$spacing-unit/2;
+            bottom: auto;
+            margin-right: 0px;
+        }
+    }
+}

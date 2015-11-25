@@ -1,0 +1,75 @@
+footer {
+	background: $highlight--mute;
+	color: white;
+
+	.wrapper {
+		padding: $spacing-unit *2;
+	}
+
+	svg {
+		width: 20px;
+		height: 20px;
+		fill: transparent;
+		stroke: #9865AB;
+    	stroke-width: 2px;
+    	stroke-linecap: round;
+
+		&.social {
+			fill: $highlight;
+			stroke: transparent;
+	    	stroke-width: 2px;
+	    	stroke-linecap: round;
+		}
+	}
+
+	p {
+		overflow: hidden;
+		margin-bottom: 0;
+	}
+
+	hr {
+		border-color: white;
+	}
+
+	ul {
+		text-align: center;
+		padding: 0; margin: 0 0 $spacing-unit 0;
+
+		li {
+			display: inline-block;
+			list-style: none;
+			padding: 0 2px;
+
+			a {
+				text-transform: uppercase;
+				font-weight: $heavy;
+
+			}
+		}
+
+		@include bp(two-hands) {
+			position: absolute;
+			bottom: $spacing-unit;
+			right: $spacing-unit*2;
+			text-align: right;
+		}
+	}
+
+	a {
+		color: white;
+
+		@include attention() {
+			color: $highlight;
+		}
+
+	}
+
+	.copy {
+		text-align: center;
+
+		@include bp(two-hands) {
+			text-align: left;
+		}
+	}
+
+}

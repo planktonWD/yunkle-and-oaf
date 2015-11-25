@@ -1,0 +1,138 @@
+///*------------------------------------*\
+//    #MIXINS
+//\*------------------------------------*/
+
+
+@mixin bp($mq) {
+
+    $breakpoint-found: false;
+
+    // Loop through the list of breakpoints we’ve provided in our settings file.
+    @each $breakpoint in $breakpoints {
+
+        // Grab the alias and the condition from their respective locations in
+        // the list.
+        $alias:     nth($breakpoint, 1);
+        $condition: nth($breakpoint, 2);
+
+        // If the media query we’ve specified has an alias and a condition...
+        @if $mq == $alias and $condition {
+
+            // ...tell the mixin that we’ve found it...
+            $breakpoint-found: true;
+
+            @if $fluid == true {
+                // ...and spit it out here.
+                @media #{$condition} {
+                    @content;
+                }
+            }
+
+            @if $fluid == false {
+                // ...and spit it out here.
+                @content;
+            }
+
+
+        }
+
+    }
+
+    // If the user specifies a non-exitent alias, send them a warning.
+    @if $breakpoint-found == false{
+        @warn "Oops! Breakpoint ‘#{$mq}’ does not exist."
+    }
+
+}
+
+@mixin font-size($font-size, $line-height: auto) {
+    font-size: $font-size;
+    font-size: ($font-size / $base-font-size) * 1rem;
+
+    @if $line-height == auto {
+        line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+    }
+
+    @else {
+
+        @if (type-of($line-height) == number or $line-height == inherit or $line-height == normal) {
+            line-height: $line-height;
+        }
+
+        @elseif ($line-height != none and $line-height != false) {
+            @warn "D’oh! ‘#{$line-height}’ is not a valid value for `line-height`."
+        }
+
+    }
+
+}
+
+// Spit out vendor prefixes in one go. Very pragmatic, far from perfect.
+@mixin vendor($property, $value...) {
+    -ms-#{$property}: $value;
+    -webkit-#{$property}: $value;
+       -moz-#{$property}: $value;
+            #{$property}: $value;
+}
+
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+// Apply ‘attention’ styles in one go.
+@mixin attention($self: false) {
+
+    @if($self != false) {
+
+        &,
+        &:hover,
+        &:active,
+        &:focus {
+            @content;
+        }
+
+    }
+
+    @else {
+
+        &:hover,
+        &:active,
+        &:focus {
+            @content;
+        }
+
+    }
+
+}
+
+
+// Create all specified heading styles in one go.
+@mixin headings($from: 1, $to: 6){
+    @for $i from $from through $to{
+      h#{$i}{
+        @content
+      }
+    }
+}
+
+// Hide from both screenreaders and browsers: h5bp.com/u
+@mixin hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+// Hide only visually, but have it available for screenreaders: h5bp.com/v
+@mixin visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}

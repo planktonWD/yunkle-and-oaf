@@ -1,0 +1,109 @@
+@-webkit-keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(20px);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+	}
+}
+
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeInandOut {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(20px);
+	}
+	40% {
+		opacity: 1;
+		-webkit-transform: translateY(0px);
+	}
+	80% {
+		opacity: 1;
+		-webkit-transform: translateY(0px);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: translateY(20px);
+	}
+}
+
+@-webkit-keyframes fadeInandOut {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(20px);
+	}
+	40% {
+		opacity: 1;
+		-webkit-transform: translateY(0px);
+	}
+	80% {
+		opacity: 1;
+		-webkit-transform: translateY(0px);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: translateY(20px);
+	}
+}
+
+
+
+.message {
+	text-align: center;
+	color: white;
+	@include vendor(box-shadow, 0px 4px 6px rgba(0,0,0,0.5));
+	padding: $spacing-unit $spacing-unit 0 $spacing-unit;
+	@extend .clearfix;
+	position: fixed;
+	bottom:0;
+	left: 0;
+	width: 100%;
+	z-index: $two_hundred;
+	padding-bottom: $spacing-unit/2;
+	-webkit-animation-duration: 0.6s;
+	animation-duration: 0.6s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-delay: 1s; /* Chrome, Safari, Opera */
+	animation-delay: 1s;
+	-webkit-animation-name: fadeInUp;
+	animation-name: fadeInUp;
+	min-height: $footer-height;
+
+	.button {
+		vertical-align: middle;
+		margin: 0 0 0 $spacing-unit/2 !important;
+	}
+}
+
+	.message--positive {
+		svg {fill: $green;}
+		-webkit-animation-duration: 5s;
+		animation-duration: 5s;
+		-webkit-animation-fill-mode: both;
+		animation-fill-mode: both;
+		-webkit-animation-delay: 0s; /* Chrome, Safari, Opera */
+		animation-delay: 0s;
+		-webkit-animation-name: fadeInandOut;
+		animation-name: fadeInandOut;
+	}
+
+	.message--negative {
+		svg {fill: $red;}
+	}
+
+	.message--warning {
+		svg {fill: orange;}
+	}

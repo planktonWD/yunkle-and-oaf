@@ -1,0 +1,24 @@
+.overlay {
+  z-index: $fourty;
+  position: absolute;
+  position: fixed;
+  display: block;
+  content: "";
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  background: rgba(0,0,0,0.4);
+  transition: opacity 300ms ease,height 1ms 300ms ease;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.overlay--active {
+  height: 100%;
+  opacity: 1;
+  transition: opacity 300ms ease;
+}

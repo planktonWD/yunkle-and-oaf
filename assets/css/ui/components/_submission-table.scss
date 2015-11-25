@@ -1,0 +1,51 @@
+#renderedDocument br {
+		display: none;
+	}
+
+#renderedDocument .sectiontable td {
+	padding: 10px;
+	border-radius: 4px;
+}
+
+#renderedDocument .fieldrow td {
+	border-radius: 0px;
+}
+
+
+#renderedDocument .field-group td {
+	padding: 0;
+}
+
+#renderedDocument table {
+	margin: 0;
+}
+
+#renderedDocument .sectiontable > tbody > tr {
+	background: white;
+	
+}
+
+#renderedDocument table.sectiontable {
+    border-collapse: separate;
+    border-spacing: 0px $spacing-unit;
+    
+  }
+
+#renderedDocument .fieldrow:nth-child(odd) {
+			background: $zebra--alt;
+		}
+		#renderedDocument .fieldrow .fieldrow:nth-child(odd) {
+			background: transparent;
+		}  
+
+#renderedDocument .fieldrow td {
+			padding: 6px;
+		}
+
+#renderedDocument .gamma {
+			margin-bottom: 6px;
+		}
+
+#renderedDocument .field-label {
+	font-family: $font-bold;
+}

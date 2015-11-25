@@ -1,0 +1,18 @@
+.cta-strip {
+
+    position: relative;
+    padding: $spacing-unit;
+
+    @include bp(portable) {
+
+        .button {
+            position: absolute;
+            top: $spacing-unit*1.5;
+            right: $spacing-unit;
+        }
+
+    }
+
+
+
+}

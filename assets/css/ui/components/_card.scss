@@ -1,0 +1,90 @@
+.card {
+	float: left;
+	width: 200px;
+	margin-right: $spacing-unit/2;
+	background: $contrast;
+	margin-bottom: $spacing-unit/2;
+	position: relative;
+
+	svg {
+		width: 90px;
+		height: 90px;
+		display: block;
+		margin: $spacing-unit auto;
+	}
+
+	@include vendor(transition, 0.3s);
+
+	&:hover {
+		@include vendor(box-shadow, 0px 0px 7px rgba(0,0,0,0.2));
+		background: $contrast--light;
+	}
+
+	&.no-feedback:hover {
+		@include vendor(box-shadow, none);
+	}
+}
+
+	.card__info {
+		background: white;
+		padding: $spacing-unit/2 $spacing-unit 0 $spacing-unit;
+		float: left;
+		width: 100%;
+	}
+
+	.card__image {
+		height: $spacing-unit *8;
+		@include vendor(background-size, cover);
+		background-position: center top;
+		background-repeat: none;
+	}
+
+.card--light {
+	@extend .card;
+	background: $contrast--light;
+
+	&:hover {
+		background: $contrast;
+	}
+}
+
+.card--edit {
+	@extend .card;
+	border: solid 12px white;
+	border-bottom: none;
+
+	.card__info {
+		padding: $spacing-unit/2 0 0 0;
+	}
+}
+
+.card--fixed-size {
+	min-height: 263px;
+	width: 173px;
+	background: white;
+
+	&:hover {
+		background: white;
+	}
+}
+
+.card--plus {
+	background: white;
+	position: relative;
+
+	svg {
+		fill: $highlight;
+		width: 60px;
+		height: 60px;
+		position: absolute;
+		top: 38%;
+		left: 32%;
+		right: auto;
+		margin: auto;
+	}
+
+	&:hover {
+		background: white;
+	}
+
+}

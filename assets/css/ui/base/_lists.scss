@@ -1,0 +1,70 @@
+li {
+
+    > ul,
+    > ol {
+        margin-bottom: 0;
+    }
+
+}
+
+ul, ol {
+	list-style-position: inside;
+}
+
+@mixin block-list {
+	margin: 0;
+	padding: 0;
+
+	li {
+		list-style: none;
+		clear: both;
+		display: inline-block;
+	}
+}
+
+.block-list {
+	@include block-list;
+}
+
+////////////////////
+
+@mixin inline-list {
+	margin: 0;
+	padding: 0;
+
+	li {
+		list-style: none;
+		//display: inline-block;
+        float: left;
+		margin-right: $spacing-unit /2;
+	}
+}
+
+.inline-list {
+	@include inline-list;
+}
+
+@mixin stack-list {
+	display: block;
+  	margin-bottom: 0;
+  	margin: 0 $spacing-unit;
+  	list-style: none;
+    float: left;
+    width: 100%;
+}
+
+.stack-list {
+	@include stack-list;
+
+  	a {
+  		padding: $spacing-unit/2;
+  		display: block;
+  	}
+
+  	> li {
+  		list-style: none;
+        float: left;
+        width: 100%;
+  	}
+
+}

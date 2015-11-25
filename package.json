@@ -1,0 +1,17 @@
+{
+  "name": "my-project-name",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-concurrent": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-jekyll": "*",
+    "grunt-sass": "*",
+    "grunt-shell": "*",
+    "grunt-svgmin": "*",
+    "grunt-svgstore": "*",
+    "load-grunt-tasks": "*",
+    "time-grunt": "*"
+  }
+}

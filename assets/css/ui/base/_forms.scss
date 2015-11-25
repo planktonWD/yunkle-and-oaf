@@ -1,0 +1,76 @@
+.form--no-labels {
+
+	// BOOM no labels
+	label {
+		display: none;
+	}
+}
+
+.form--input-borders {
+
+	input[type="username"], input[type="text"], input[type="password"], input[type="email"], textarea {
+		border: solid 1px $light-grey;
+	}
+
+}
+
+label {
+	display: block;
+	margin-bottom: $spacing-unit/4;
+}
+
+form div {
+	@include vendor(box-sizing, border-box);
+}
+
+// tagging is used for the tag js plugin, so is .chosen-container for chosen plugin
+input[type="username"], input[type="text"], input[type="password"], input[type="email"], textarea, .chosen-container {
+	background: $off-white;
+	border: solid 1px #ccc;
+	border-radius: 0;
+	padding: 0.9em $spacing-unit/2 0.8em;
+	width: 100%;
+	-webkit-appearance: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	@extend %margin-bottom;
+
+	&::-webkit-input-placeholder { /* WebKit browsers */
+    color:    $light-grey;
+	}
+	&:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	   color:     $light-grey;
+	   opacity:  1;
+	}
+	&::-moz-placeholder { /* Mozilla Firefox 19+ */
+	   color:     $light-grey;
+	   opacity:  1;
+	}
+	&:-ms-input-placeholder { /* Internet Explorer 10+ */
+	   color:     $light-grey;
+	}
+	}
+
+
+textarea {
+	width: 100%;
+	resize: vertical;
+}
+
+form ul {
+	margin:  0;
+    padding: 0;
+    list-style: none;
+}
+
+
+.gfield {
+	float: left;
+	width: 100%;
+
+	@include bp(full-nav) {
+		width: 33.333%;
+		padding-right: $spacing-unit;
+	}
+}

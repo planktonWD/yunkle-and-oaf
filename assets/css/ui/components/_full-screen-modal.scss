@@ -1,0 +1,32 @@
+/* This parent can be any width and height */
+.full-screen-modal {
+  text-align: center;
+  background: rgba(0,0,0,0.85);
+  width: 100%;
+	position: fixed;
+	top: 0;
+	left:0;
+	height: 100%;
+	z-index: $top;
+}
+ 
+/* The ghost, nudged to maintain perfect centering */
+.block:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+/* The element to be centered, can also be of any width and height */ 
+.full-screen-modal__content {
+  position: fixed;
+  top: 20%;
+  z-index: $one-hundred;
+  width: 80%;
+  color: white;
+  left: 50%;
+  margin-left: -40%;
+
+}

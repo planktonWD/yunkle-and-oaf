@@ -1,0 +1,7 @@
+.zebra, .zebra--striped:nth-child(odd) {
+	background-color: $zebra;
+}
+
+.zebra--alt, .zebra--striped:nth-child(even) {
+	background-color: $zebra--alt;
+}

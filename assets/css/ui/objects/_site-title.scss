@@ -1,0 +1,78 @@
+////////////////////
+
+// with SVG 
+
+////////////////////
+
+@mixin site-title-svg-dims {
+	width: 214px;
+	height: 47px;
+}
+
+@mixin site-title-svg-dims--full-nav{
+	width: 174px;
+	height: 40px;
+}
+
+.site-title-svg {
+	position: relative;
+	font-size: 0;
+	float: left;
+	//margin: 0 auto; // toggle centered easy!!
+	line-height: 1;
+	@include vendor(transition, 0.3s);
+	@include site-title-svg-dims;
+
+
+	&:hover {
+		opacity: 0.6 !important;
+
+	}
+
+	svg, a {
+		@include site-title-svg-dims;
+
+		display: block;
+		fill: white;
+	}
+
+	@include bp(full-nav) {
+		@include site-title-svg-dims--full-nav;
+
+		svg, a {
+			@include site-title-svg-dims--full-nav;
+
+		}
+
+	}
+
+}
+
+
+////////////////////
+
+// just text
+
+////////////////////
+
+/*
+.site-title {
+	font-weight: 200 !important;
+	@include font-size(26px, 1.2);
+	text-align: center;
+
+	a {
+		color: white;
+
+		@include attention {
+			color: $base-color--mute;
+		}
+	}
+
+	@include bp(small-lap) {
+		float: left;
+		@include font-size(32px, 1);
+	}
+}
+
+*/

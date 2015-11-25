@@ -1,0 +1,66 @@
+//
+//
+//		Spacing Unit
+//
+//
+
+
+// These variables are framework variables, sourced from variables defined
+// above. Feel free to use these variables throughout your project, but do not
+// modify or reassign them.
+$base-spacing-unit:           $base-line-height;
+$base-spacing-unit--small:    round($base-spacing-unit / 2);
+$base-spacing-unit--large:    round($base-spacing-unit * 2);
+
+
+
+$spacing-unit: $base-spacing-unit;
+$spacing-unit--small:   $base-spacing-unit--small;
+$spacing-unit--large:   $base-spacing-unit--large;
+$layout-gutter: $spacing-unit;
+
+
+$use-fractions:   false;
+
+
+
+
+//
+//
+//		Spacing Trumps
+//
+//
+
+$margin:                          $base-spacing-unit !default;
+$margin--small:                       halve($margin) !default;
+$margin--tiny:                      quarter($margin) !default;
+$margin--large:                      double($margin) !default;
+$margin--huge:                    quadruple($margin) !default;
+
+$padding:                         $base-spacing-unit !default;
+$padding--small:                      halve($padding) !default;
+$padding--tiny:                     quarter($padding) !default;
+$padding--large:                     double($padding) !default;
+$padding--huge:                   quadruple($padding) !default;
+
+$enable-margins:                  true !default;
+$enable-margins--tiny:            true !default;
+$enable-margins--small:           true !default;
+$enable-margins--large:           true !default;
+$enable-margins--huge:            false !default;
+
+$enable-margins--negative:        true !default;
+$enable-margins--negative-tiny:   false !default;
+$enable-margins--negative-small:  true !default;
+$enable-margins--negative-large:  false !default;
+$enable-margins--negative-huge:   false !default;
+
+$enable-margins--none:            true !default;
+
+$enable-paddings:                 true !default;
+$enable-paddings--tiny:           true !default;
+$enable-paddings--small:          true !default;
+$enable-paddings--large:          true !default;
+$enable-paddings--huge:           false !default;
+
+$enable-paddings--none:           true !default;

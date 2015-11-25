@@ -1,0 +1,34 @@
+<!--
+
+
+    HERO
+
+
+  -->
+
+  <div class="wrapper u-pt0">
+
+    <div class="layout u-p+ bg-image--typing bg-image--dark">
+
+      <div class="layout__item u-p+">
+
+        <svg class="aligncenter one-half">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/svg-defs.svg#shape-formtab-branding"></use>
+          </svg>
+
+          <h2 class="aligncenter light-heading">Official Styleguide</h2>
+
+          <p>Please install <a href="http://gruntjs.com/installing-grunt">grunt</a>, <a href="http://jekyllrb.com/docs/installation/">Jekyll</a> and <a href="http://sass-lang.com/install">sass</a>. Then grab yourself a copy of this styleguide, cd to the directory and type grunt serve [enter] - Boom! Sass and JS compiled and SVG sprite made on the fly, plus a little <a href="https://www.google.co.nz/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CBwQFjAA&url=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Flivereload%2Fjnihajbhpnppcggbcgedagnkighmdlei%3Fhl%3Den&ei=Q6BtVczJAdPW8gXh7oKwCQ&usg=AFQjCNE3uLWl-7EsJ9SPxfbqp4JErdhiTQ&bvm=bv.94911696,d.dGc">live reload</a> if you have installed. Just go to http://127.0.0.1:4000/formTab-styleguide/ (check the casing of Formtab-Syleguide) when you have run the command</p>
+
+          <h2 class="light-heading">Skinning</h2>
+          <p>If you look in the Gruntfile.js you will see that at the time of writing this SASS is compiling two .css files from two major .scss files these are formtab.scss and eforms.scss</p>
+          <p>If you look at the formtab.scss you will see it imports a settings and function file along with the style file.</p>
+          <p>So create a new skin there are a couple of considerations. The site actually uses the site name as the variable for grabbing the correct stylesheet so name your master .scss file the name of the website. Duplicate eforms.scss, and create a new skin in the settings folder (maybe duplicate _eforms-skin.scss and rename it to _acme-skin.scss and correctly replace it in acme.scss.</p>
+          <p>Then open up Gruntfile.js and go to line 100 or so, you will see that eforms.scss is compiling to eforms.css so you will need to add a new line for acme.scss to acme.css</p>
+          <p>With that done you will now get a complied acme.css file with the acme skin applid to it. Just note that you will need to open in the styleguide site /includes/styleguide-head.html and make sure it is pulling in the right .css file so you can start tweaking the colors and testing etc</p>
+          <p>At the end make sure you upload all .css files in the assets folder to be sure that any global css changes are being applied to all sites.</p>
+          </div>
+
+    </div>
+
+  </div>

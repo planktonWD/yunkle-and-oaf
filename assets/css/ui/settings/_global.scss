@@ -1,0 +1,16 @@
+/*
+	Prime Global Variables & Settings
+*/
+
+$margin-bottom-pre-rem: $base-spacing-unit / $base-font-size;
+
+$half-margin-bottom: ($margin-bottom-pre-rem /2);
+$quarter-margin-bottom: ($margin-bottom-pre-rem /4);
+
+$radius: 4px; // set to 0 is you don't need
+
+$trigger-horizontal-position: right;
+
+*:focus {
+    outline: 0;
+}

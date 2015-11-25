@@ -1,0 +1,155 @@
+/*
+
+  Menu Trigger
+
+*/
+
+/* Big trigger*/
+
+$trigger-width: 40px;
+$trigger-height: 19px;
+$trigger-top-position: 61px;
+$slice3-top: -20px;
+$slice3-left: 2px;
+$span-mb: 8px;
+$span-ml: 2px;
+
+
+/* Small Trigger
+$trigger-width: 20px;
+$trigger-height: 19px;
+$trigger-top-position: 61px;
+$slice3-top: -12px;
+$slice3-left: 2px;
+$span-mb: 4px;
+$span-ml: 2px;
+*/
+////////////////////////
+
+$span-color: white;
+
+$push-site-wrap-width: -220px; // change direction using - or + value
+$push-trigger-width: $push-site-wrap-width; // change direction using - or + value
+
+
+// to change the horizontal position of a trigger
+// go to _global.scss
+
+
+/*
+
+    Huuman vibe
+
+    .hamburger is just the p tag with span in it
+*/
+.hamburger {
+  position: absolute;
+  top: 0;
+  #{$trigger-horizontal-position}: 0;
+
+  @include bp(full-nav) {
+    display: none;
+  }
+
+  z-index: 6000;
+  @include vendor(transition, 0.2s, all);
+
+  span {
+    width: $trigger-width;
+    height: 2px;
+    display: block;
+    background: $span-color;
+    margin: 0 0 $span-mb $span-ml;
+    transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+
+/*
+
+    Nav Trigger
+
+    This is the hidden checkbox
+ */
+.nav-trigger {
+  /* critical styles - hide the checkbox input */
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+
+label[for="nav-trigger"] {
+  /* critical positioning styles */
+  position: absolute;
+  #{$trigger-horizontal-position}: $spacing-unit;
+  top:$trigger-top-position;
+  z-index: 2;
+
+  /* non-critical apperance styles */
+  height: $trigger-height;
+  width: $trigger-width;
+  cursor: pointer;
+
+}
+
+/* Make the Magic Happen */
+.nav-trigger + label, .site-wrap {
+  transition: all 0.7s ease-in-out;
+}
+
+.nav-trigger:checked + label {
+ // #{$trigger-horizontal-position}: $push-site-wrap-width + $spacing-unit;
+  @include vendor(transform, translate($push-trigger-width, 0));
+
+    span {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    span.slice1 {
+      transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      margin-top: 8px;
+    }
+    span.slice3 {
+      transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      margin-top: $slice3-top;
+      margin-left: $slice3-left;
+    }
+    span.slice1, span.slice3 {
+      opacity: 1;
+      filter: alpha(opacity=100);
+    }
+}
+
+.nav-trigger:checked ~ .site-wrap {
+    @include vendor(transform, translate($push-site-wrap-width, 0));
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.2);
+}
+
+
+.nav-trigger:checked ~ .site-wrap .overlay {
+  opacity: 1;
+  z-index: 99;
+  background: rgba(0,0,0,0.4);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 999;
+  height: 100%;
+  opacity: 1;
+
+}

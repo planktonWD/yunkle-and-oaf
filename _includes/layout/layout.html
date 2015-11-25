@@ -1,0 +1,167 @@
+     <!--
+
+
+        LAYOUT
+
+
+      -->
+  
+
+    <div class="layout u-bb u-mb u-pr" id="layout">
+
+   
+
+      <div class="layout__item u-pt">
+     
+        <h1>Layout</h1>
+        <p>Breaking this up into sections are quite a few handy class available</p>
+
+      </div>
+        <div class="layout__item two-hands-one-half">
+
+          <h2>Containers</h2>
+          <p>.layout wraps .layout__item and widths if needed are added to the .layout__item as a sepearate class following the single responsibility priciple.</p>
+          <p>.layout pushs the container to the left -$spacing-unit and a padding is added to the children .layout__item(s)</p>
+          <p>!important note! - please comment out any whitespace between .layout__item(s) this is the 1px inline-block issue - this resolves this - I know not ideal but better that others. See <a href="http://csswizardry.com/csswizardry-grids/">http://csswizardry.com/csswizardry-grids/</a> (note the difference is that "layout" is used in this styleguide rather than "grid")</p>
+
+          <h2>Widths</h2>
+          <p>These classes can be used but I'd advise using the responsive widths as site is responsive:</p>
+
+          <p>/**
+     * Whole.
+     */<br />
+    .one-whole           { width: 100% !important; }
+    </p>
+    <p>
+    /**
+     * Halves.
+     */<br />
+    .one-half,
+    .two-quarters,
+    .three-sixths,
+    .four-eighths,
+    .five-tenths,
+    .six-twelfths        { width: 50% !important; }
+    </p>
+    <p>
+    /**
+     * Thirds.
+     */<br />
+    .one-third,
+    .two-sixths,
+    .three-ninths,
+    .four-twelfths       { width: 33.3333333% !important; }
+    .two-thirds,
+    .four-sixths,
+    .six-ninths,
+    .eight-twelfths      { width: 66.6666666% !important; }
+    </p>
+    <p>
+    /**
+     * Quarters.
+     */<br />
+    .one-quarter,
+    .two-eighths,
+    .three-twelfths      { width: 25% !important; }
+    .three-quarters,
+    .six-eighths,
+    .nine-twelfths       { width: 75% !important; }
+    </p>
+    <p>
+    /**
+     * Fifths.
+     */<br />
+    .one-fifth,
+    .two-tenths          { width: 20% !important; }
+    .two-fifths,
+    .four-tenths         { width: 40% !important; }
+    .three-fifths,
+    .six-tenths          { width: 60% !important; }
+    .four-fifths,
+    .eight-tenths        { width: 80% !important; }
+    </p>
+    <p>
+    /**
+     * Sixths.
+     */<br />
+    .one-sixth,
+    .two-twelfths        { width: 16.6666666% !important; }
+    .five-sixths,
+    .ten-twelfths        { width: 83.3333333% !important; }
+    </p>
+    <p>
+    /**
+     * Eighths.
+     */<br />
+    .one-eighth          { width: 12.5% !important; }
+    .three-eighths       { width: 37.5% !important; }
+    .five-eighths        { width: 62.5% !important; }
+    .seven-eighths       { width: 87.5% !important; }
+    </p>
+    <p>
+    /**
+     * Ninths.
+     */<br />
+    .one-ninth           { width: 11.1111111% !important; }
+    .two-ninths          { width: 22.2222222% !important; }
+    .four-ninths         { width: 44.4444444% !important; }
+    .five-ninths         { width: 55.5555555% !important; }
+    .seven-ninths        { width: 77.7777777% !important; }
+    .eight-ninths        { width: 88.8888888% !important; }
+    </p>
+    <p>
+    /**
+     * Tenths.
+     */<br />
+    .one-tenth           { width: 10% !important; }
+    .three-tenths        { width: 30% !important; }
+    .seven-tenths        { width: 70% !important; }
+    .nine-tenths         { width: 90% !important; }
+    </p>
+    <p>
+    /**
+     * Twelfths.
+     */<br />
+    .one-twelfth         { width:  8.3333333% !important; }
+    .five-twelfths       { width: 41.6666666% !important; }
+    .seven-twelfths      { width: 58.3333333% !important; }
+    .eleven-twelfths     { width: 91.6666666% !important; }</p>
+
+        </div><!--
+
+        --><div class="layout__item two-hands-one-half">
+
+          <h2>Responsive Layout</h2>
+
+          <p>The following are a list of breakpoints, used them with the width class together to inforce a width at a breakpoint <b>very</b> handy.</p>
+          <p> "max-mobile"    "screen and (max-width: 540px)",<br/>
+    "min-mobile"  "screen and (min-width: 500px)",<br/>
+  "two-hands"     "screen and (min-width: 700px)",<br/>
+    "small-lap"     "screen and (min-width: 800px)",<br/>
+    "lap"           "screen and (min-width: 860px) and (max-width: 1047px)",<br/>
+    "lap-and-up"    "screen and (min-width: 860px)",<br/>
+    "portable"      "screen and (min-width: 900px)",<br/>
+    "desk"          "screen and (min-width: 1072px)",<br/>
+    "below-desk"    "screen and (max-width: 1071px)",<br/>
+    "retina"        "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)"</p>
+
+      <p>For example: div class="layout__item two-hands-one-half" would make an element inline block full width on mobile but at min-width 700px breakpoint if would be width 50%</p>
+
+      <h2>Utility Classes</h2>
+
+          <p>These classes "trump" everything so very useful for enforcing a look without writing custom CSS for a non-modular piece of markup.</p>
+          <p>(m|p)(t|r|b|l|)(-|+|0) {}` = margin/padding top/right/bottom/left</p>
+          <p>Example div class="u-pr" adds $spacing-unit padding right to element. div class="u-mb0" makes elements margin-bottom: 0.</p> 
+          <p>Also there are vertical alignment and border classes</p>
+          <p>.bb adds a border bottom etc<br />
+          .u-vb vertically aligns element to bottom<br />
+          .u-tt makes text top</p>
+          <p>These are mainly used for aligning buttons sometimes</p>
+        <h2>Helper Classes</h2>  
+          <p>Also available are .alignleft, .alignright, .aligncenter which float elements and add margins to them. You can tweak margins with the utility classes above</p>
+
+        </div>
+       
+      
+
+      </div>

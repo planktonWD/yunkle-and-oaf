@@ -1,0 +1,161 @@
+// Button Borders
+$btn-radius: $radius;
+$btn-border-width: 2px;
+$btn-border-style: solid;
+$btn-border-color: $highlight;
+
+// Button Padding
+$btn-padding: 8px;
+$btn-vertical-padding: $btn-padding - $btn-border-width;
+$btn-horizontal-padding: double($btn-padding) - $btn-border-width;
+
+// Using svgs in buttons?
+$svg-buttons: true;
+
+@mixin button {
+	display: inline-block; /* [1] */
+    vertical-align: middle; /* [2] */
+    font-weight: $heavy;
+    text-align: center; /* [4] */
+    border: none; /* [4] */
+    margin:  0; /* [4] */
+    cursor: pointer; /* [5] */
+    overflow: visible; /* [6] */
+    padding: $btn-vertical-padding $btn-horizontal-padding !important; /* [7] */
+    background-color: transparent;
+
+    @if($btn-border-width != 0) {
+        border: $btn-border-width $btn-border-style $btn-border-color;
+    }
+
+    @if($btn-radius != 0) {
+        border-radius: $btn-radius;
+    }
+
+
+	margin-bottom: $spacing-unit !important;
+	@include vendor(transition, 0.3s);
+	@include font-size(17px);
+	color: $highlight;
+	position: relative;
+	margin-right: $spacing-unit/2;
+	
+
+	@include attention {
+		text-decoration: none;
+		background-color: $highlight;
+		border-color: $highlight;
+		color: white;
+	}
+}
+
+.button {
+	@include button;
+	
+	@if($svg-buttons == true) {
+
+		&.button--svg {
+			padding-right: 24px !important;
+		}
+	
+		// tweak these to suit your svgs
+		svg {
+			width: 6px;
+		    height: 16px;
+		    fill: transparent;
+		    position: absolute;
+		    top: 0.6em;
+		    right: 8px;
+		    stroke: $highlight;
+		    stroke-width: 2px;
+		    stroke-linecap: round;
+		}
+	
+		@include attention {
+			svg {
+				stroke: white;
+	
+			}
+		}
+	}
+}
+
+	/* color modifiers */
+
+	.button--white {
+		@include button;
+		background-color: transparent !important;
+		border-color: white !important;
+		color: white;
+
+		@include attention {
+			background-color: white !important;
+			border-color: white !important;
+			color: $highlight;
+		}
+		
+		@if($svg-buttons == true) {
+
+			&.button--svg {
+				padding-right: 24px !important;
+			}
+	
+			svg {
+				width: 6px;
+			    height: 16px;
+			    fill: transparent;
+			    position: absolute;
+			    top: 0.6em;
+			    right: 8px;
+			    stroke: white;
+			    stroke-width: 2px;
+			    stroke-linecap: round;
+			}
+	
+			@include attention {
+				svg {
+					stroke: $highlight;
+	
+				}
+			}
+		}
+	}
+
+	.button--highlight {
+		@include button;
+		background-color: $highlight !important;
+		border-color: $highlight !important;
+		color: white;
+
+		@include attention {
+			background-color: white !important;
+			border-color: white !important;
+			color: $highlight;
+		}
+		
+		@if($svg-buttons == true) {
+
+			&.button--svg {
+				padding-right: 24px !important;
+			}
+	
+			svg {
+				width: 6px;
+			    height: 16px;
+			    fill: transparent;
+			    position: absolute;
+			    top: 0.6em;
+			    right: 8px;
+			    stroke: white;
+			    stroke-width: 2px;
+			    stroke-linecap: round;
+			}
+	
+			@include attention {
+				svg {
+					stroke: $highlight;
+	
+				}
+			}
+		}
+	}

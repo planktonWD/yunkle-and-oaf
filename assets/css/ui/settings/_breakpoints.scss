@@ -1,0 +1,12 @@
+$breakpoints: (
+    "max-mobile"    "screen and (max-width: 500px)",
+    "landscape-mobile"    "screen and (min-width: 480px)",
+    "two-hands"    "screen and (min-width: 600px)",
+    "full-nav"      "screen and (min-width: 760px)",
+    "portable"      "screen and (min-width: 820px)",
+    "small-desk"      "screen and (min-width: 900px)",
+    "desk"          "screen and (min-width: 1180px)",
+    "huge"          "screen and (min-width: 1400px)"
+);
+
+$max-width: 1120px;

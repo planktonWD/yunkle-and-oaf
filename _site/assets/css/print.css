@@ -1,0 +1,17 @@
+svg,
+nav,
+footer,
+#mob-nav,
+header,
+.overlay,
+.full-screen-modal,
+.vertical-menu,
+.breadcrumbs,
+.desk-left-col
+ {
+	display: none;
+}
+
+html {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+}
