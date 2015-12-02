@@ -24,7 +24,7 @@ module.exports = function (grunt) {
          uglify: {
             my_target: {
                 files: {
-                'assets/js/script.miny.js': ['assets/js/scripts/jquery.fancybox.pack.js','assets/js/scripts/jquery.flexslider-min.js','assets/js/scripts/typed.js','assets/js/scripts/main.js']
+                'assets/js/script.miny.js': [/*'assets/js/scripts/jquery.fancybox.pack.js',*/'assets/js/scripts/jquery.flexslider-min.js',/*'assets/js/scripts/typed.js',*/'assets/js/scripts/main.js']
                 }
             }
         },

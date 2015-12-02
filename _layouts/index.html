@@ -13,17 +13,25 @@
   	{% include head/header-with-bg-image.html %}
 
 
-	  <div id="main" class="clearfix">
+	  <div id="main" class="clearfix wrapper">
+	  
+	  	 <div class="layout">
+	  
+			  <article class="layout__item u-3/4">
+			  
+			  <img src="http://placehold.it/200/200" />
+			  
+			  {{ content }}
+			  </article><!-- 
+			 
+			  
+			  
+			   --><aside class="layout__item u-1/4">
+			   
+			   <img src="http://placehold.it/200/200" />
+			   </aside>
 	
-	    <section class="clearfix bg-off-white u-pt+ u-mb+">
-	
-	        <div class="wrapper">
-	
-				{{ content }}
-	
-			</div>
-		
-		</section>		
+	   	</div><!-- END layout -->	
 
     </div><!-- END #main -->
 

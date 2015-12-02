@@ -21,3 +21,11 @@ a {
         color: $color-links-secret--attention;
     }
 }
+
+a img {
+	@include vendor(transition, 0.2s, all);
+	
+	@include attention() {
+        opacity: 0.8;
+    }	
+}

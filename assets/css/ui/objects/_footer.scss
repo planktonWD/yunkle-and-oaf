@@ -1,65 +1,15 @@
 footer {
-	background: $highlight--mute;
+	background: url('../../img/footer-compressor.png');
+	@include vendor(background-size, cover);
 	color: white;
+	padding: $spacing-unit 0;
 
-	.wrapper {
-		padding: $spacing-unit *2;
-	}
-
-	svg {
-		width: 20px;
-		height: 20px;
-		fill: transparent;
-		stroke: #9865AB;
-    	stroke-width: 2px;
-    	stroke-linecap: round;
-
-		&.social {
-			fill: $highlight;
-			stroke: transparent;
-	    	stroke-width: 2px;
-	    	stroke-linecap: round;
-		}
-	}
-
-	p {
-		overflow: hidden;
-		margin-bottom: 0;
-	}
-
-	hr {
-		border-color: white;
-	}
-
-	ul {
-		text-align: center;
-		padding: 0; margin: 0 0 $spacing-unit 0;
-
-		li {
-			display: inline-block;
-			list-style: none;
-			padding: 0 2px;
-
-			a {
-				text-transform: uppercase;
-				font-weight: $heavy;
-
-			}
-		}
-
-		@include bp(two-hands) {
-			position: absolute;
-			bottom: $spacing-unit;
-			right: $spacing-unit*2;
-			text-align: right;
-		}
-	}
 
 	a {
 		color: white;
 
 		@include attention() {
-			color: $highlight;
+			color: $black;
 		}
 
 	}
@@ -72,4 +22,84 @@ footer {
 		}
 	}
 
+	img {
+		margin-top: $spacing-unit !important;
+	}
+
+	.social-links a {
+
+		text-align: center;
+		margin: $spacing-unit 0;
+		svg {
+			position: relative;
+			fill: white;
+			width: 20px;
+			height: 20px;
+		}
+
+		@include attention() {
+
+			svg {fill: $highlight--mute;}
+		}
+
+
+		@include bp(full-nav) {
+
+			float: right;
+			margin: $spacing-unit 7px 0;
+
+
+		}
+	}
+
+	#footer-main-menu {
+
+		text-align: center;
+		margin: 0;
+
+		li {
+			text-transform: uppercase;
+			margin: 5px 20px;
+			display: inline-block;
+			list-style: none;
+		}
+
+		@include bp(full-nav) {
+
+			margin-top: $spacing-unit;
+			li {
+			margin-left: 0;
+			float: left;
+			}
+
+			text-align: center;
+		}
+	}
+
+	.alignright {
+		float: left;
+		width: 100%;
+		text-align: center;
+		margin: 0;
+
+		@include bp(full-nav) {
+
+			float: right;
+			text-align: right;
+
+		}
+	}
+
+}
+
+.site-wrap #sb_instagram .sb_instagram_header a {
+    text-decoration: none;
+    margin: 0 auto;
+    float: none;
+    width: 170px;
+}
+
+#sb_instagram #sbi_images {
+
+	margin-bottom: -5px;
 }

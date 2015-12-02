@@ -24,6 +24,10 @@
   list-style: none;
   background: white;
 
+  ul {
+      margin-bottom: 0;
+  }
+
 
   /* Navigation Menu - List items */
   li {
@@ -40,7 +44,7 @@
           }
     }
 
-    &.active > a {
+    &.current-menu-item > a {
         color: $highlight;
     }
 
@@ -56,5 +60,37 @@
           color: $highlight;
         }
     }
+
+    svg {
+
+        width: 20px;
+        height: 20px;
+        fill: $black;
+
+    }
+  }
+
+  .social-nav {
+
+      padding-right: $spacing-unit;
+
+      li {
+
+          float: right;
+          width: 20px;
+
+          a {
+
+              padding: 0;
+              @include vendor(transition, 0.3s);
+
+              &:hover {
+
+                  fill: $highlight;
+              }
+          }
+
+      }
+
   }
 }

@@ -16,11 +16,13 @@ $(".toggle-content-trigger").click(function () {
   $(toggled_content_container_id).slideToggle();
 });
 
+
+
+
 /*
 
 	Typed
 
-*/
 
 $(function(){
 
@@ -37,6 +39,9 @@ $(function(){
 
 });
 
+*/
+
+
 /*
 
     Flexslider
@@ -47,15 +52,32 @@ $('.flexslider').flexslider({
 animation: "fade"
 });
 
+var  mn = $("#nav");
+    mns = "main-nav-scrolled";
+    hdr = $('header').height();
+
+
+
+
+$(window).scroll(function() {
+  if( $(this).scrollTop() > hdr ) {
+    mn.addClass(mns);
+  } else {
+    mn.removeClass(mns);
+  }
+});
+
 /*
 
     Fancybox
 
-*/
+
 
 
 $(".fancybox").fancybox();
 
 $(".various").fancybox({ maxWidth	: 800, maxHeight	: 600, fitToView	: false, width	: '70%', height	: '70%', autoSize	: false, closeClick	: false, openEffect	: 'none', closeEffect	: 'none' });
 
+
+*/
 });

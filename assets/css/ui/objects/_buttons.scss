@@ -10,7 +10,7 @@ $btn-vertical-padding: $btn-padding - $btn-border-width;
 $btn-horizontal-padding: double($btn-padding) - $btn-border-width;
 
 // Using svgs in buttons?
-$svg-buttons: true;
+$svg-buttons: false;
 
 @mixin button {
 	display: inline-block; /* [1] */
@@ -128,9 +128,9 @@ $svg-buttons: true;
 		color: white;
 
 		@include attention {
-			background-color: white !important;
-			border-color: white !important;
-			color: $highlight;
+			background-color: $highlight--mute !important;
+			border-color: $highlight--mute !important;
+			color: white;
 		}
 		
 		@if($svg-buttons == true) {

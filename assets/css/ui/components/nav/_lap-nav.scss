@@ -20,9 +20,14 @@
         @include font-size(14px);
         z-index: 99;
 
+        .menu-primary-menu-container {
+            display: inline-block;
+        }
+
         ul {
             margin: 0;
             padding: 0;
+            display: inline-block;
         }
 
         li {
@@ -32,15 +37,15 @@
             margin-right: $spacing-unit/4;
             margin-left: $spacing-unit/4;
             @include vendor(transition, 0.3s);
-			
+
 
             a {
-                
+
                 @include attention {
                     color: $highlight;
-                   
+
                 }
-                
+
                 padding-left: $spacing-unit/2;
                 padding-right: $spacing-unit/2;
             }
@@ -48,6 +53,26 @@
 
         }
 
+        .social-nav {
+
+            padding-right: 0;
+            margin-top:10px;
+            vertical-align: bottom;
+
+
+
+        }
+
+    }
+
+    &.main-nav-scrolled {
+    	position: fixed;
+    	top: 0 !important;
+    	left:0;
+    	background: rgba(255,255,255,0.9);
+    	padding-top: 15px;
+    	padding-bottom: 15px;
+    	@include vendor(box-shodow,0px 1px 6px rgba(0,0,0,0.1)) ;
     }
 
 
@@ -55,5 +80,5 @@
 
 @include bp(portable) {
 		.nav {top: 260px;}
-		
+
 	}

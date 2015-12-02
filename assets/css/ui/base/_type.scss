@@ -15,6 +15,7 @@ b, strong {
 .small {
 	@include font-size(12px);
 	line-height: 1.4;
+	text-transform: uppercase;
 }
 
 .subtitle {
